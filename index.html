@@ -36,7 +36,7 @@
             </button>
           </div>
         </div>
-        <div id="mobile-menu" class="md:hidden max-h-0 overflow-hidden transition-all duration-300 bg-white/95 rounded-b-2xl shadow-lg text-center">
+        <div id="mobile-menu" class="md:hidden bg-white/95 rounded-b-2xl shadow-lg text-center">
           <a href="index.html" class="block py-3 text-black hover:text-yellow-600 transition-colors nav-link border-b border-gray-200">Home</a>
           <a href="services.html" class="block py-3 text-black hover:text-yellow-600 transition-colors nav-link border-b border-gray-200">Services</a>
           <a href="programs.html" class="block py-3 text-black hover:text-yellow-600 transition-colors nav-link border-b border-gray-200">Programs</a>
@@ -50,29 +50,24 @@
       <script>
         // Mobile menu toggle for accessibility and smooth animation
         document.addEventListener('DOMContentLoaded', function () {
-          const mobileMenuButton = document.getElementById('mobile-menu-button');
-          const mobileMenu = document.getElementById('mobile-menu');
-          let menuOpen = false;
-          if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function () {
-              menuOpen = !menuOpen;
-              if (menuOpen) {
-                mobileMenu.classList.remove('max-h-0');
-                mobileMenu.classList.add('max-h-[500px]');
-                mobileMenu.classList.remove('overflow-hidden');
-                // Change icon to close
-                mobileMenuButton.querySelector('i').classList.remove('fa-bars');
-                mobileMenuButton.querySelector('i').classList.add('fa-times');
-              } else {
-                mobileMenu.classList.add('max-h-0');
-                mobileMenu.classList.remove('max-h-[500px]');
-                mobileMenu.classList.add('overflow-hidden');
-                // Change icon to bars
-                mobileMenuButton.querySelector('i').classList.remove('fa-times');
-                mobileMenuButton.querySelector('i').classList.add('fa-bars');
-              }
-            });
-          }
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuButton.querySelector('i');
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('active');
+                    
+                    // Change icon based on menu state
+                    if (mobileMenu.classList.contains('active')) {
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-times');
+                    } else {
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            }
         });
       </script>
     </nav>

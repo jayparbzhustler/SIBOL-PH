@@ -12,65 +12,66 @@
 </head>
 <body class="gradient-bg">
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-card transition-all duration-300" id="main-nav" style="background: #F8F8F8; backdrop-filter: blur(10px); top: 0;">
-        <div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-2">
-                <div class="flex items-center">
-                    <a href="index.html" class="flex items-center"> 
-                        <img src="sibol.jpg" alt="Sibol Project PH Logo" class="h-16 md:h-20 align-middle logo-spacing"> 
-                    </a>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Home</a>
-                    <a href="services.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Services</a>
-                    <a href="programs.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Programs</a>
-                    <a href="about.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">About</a>
-                    <a href="contact.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Contact</a>
-                </div>
-                <button onclick="window.location.href='contact.html';" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors hidden md:block">
-                    <i class="fas fa-phone mr-2"></i>Get Help
-                </button>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-            <div id="mobile-menu" class="md:hidden py-2 text-center hidden">
-                <a href="index.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Home</a>
-                <a href="services.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Services</a>
-                <a href="programs.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Programs</a>
-                <a href="about.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">About</a>
-                <a href="contact.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Contact</a>
-                <button onclick="window.location.href='contact.html';" class="w-full bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors mt-2">
-                    <i class="fas fa-phone mr-2"></i>Get Help
-                </button>
-            </div>
+    <nav class="fixed w-full z-50 glass-card transition-all duration-300" id="main-nav">
+      <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+        <div class="flex justify-between items-center py-2">
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center">
+              <img src="sibol.jpg" alt="Sibol Project PH Logo" class="h-16 w-16 sm:h-16 sm:w-16 md:h-20 md:w-20 align-middle logo-spacing" style="object-fit:contain;">
+            </a>
+          </div>
+          <div class="hidden md:flex space-x-4 lg:space-x-8">
+            <a href="index.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Home</a>
+            <a href="services.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Services</a>
+            <a href="programs.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Programs</a>
+            <a href="about.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">About</a>
+            <a href="contact.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Contact</a>
+          </div>
+          <button onclick="window.location.href='contact.html';" class="bg-purple-600 text-white px-4 sm:px-6 py-2 rounded-full hover:bg-purple-700 transition-colors hidden md:block text-sm sm:text-base">
+            <i class="fas fa-phone mr-2"></i>Get Help
+          </button>
+          <div class="md:hidden flex items-center">
+            <button id="mobile-menu-button" class="text-gray-800 focus:outline-none p-2">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
         </div>
-    </nav>
-    <section id="services" class="hero-section pb-12">
+        <div id="mobile-menu" class="md:hidden bg-white/95 rounded-b-2xl shadow-lg text-center">
+          <a href="index.html" class="block py-3 text-black hover:text-yellow-600 transition-colors nav-link border-b border-gray-200">Home</a>
+          <a href="services.html" class="block py-3 text-black hover:text-yellow-600 transition-colors nav-link border-b border-gray-200">Services</a>
+          <a href="programs.html" class="block py-3 text-black hover:text-yellow-600 transition-colors nav-link border-b border-gray-200">Programs</a>
+          <a href="about.html" class="block py-3 text-black hover:text-yellow-600 transition-colors nav-link border-b border-gray-200">About</a>
+          <a href="contact.html" class="block py-3 text-black hover:text-yellow-600 transition-colors nav-link">Contact</a>
+          <button onclick="window.location.href='contact.html';" class="w-11/12 mx-auto bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition-colors mt-4 mb-2 text-base font-bold flex items-center justify-center">
+            <i class="fas fa-phone mr-2"></i>Get Help
+          </button>
+        </div>
+      </div>
+      <script>
+        // Mobile menu toggle for accessibility and smooth animation
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuButton.querySelector('i');
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function () {
-                mobileMenu.classList.toggle('hidden');
-                // Change icon from bars to times and vice-versa
-                const icon = mobileMenuButton.querySelector('i');
-                if (mobileMenu.classList.contains('hidden')) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                } else {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                }
-            });
-        }
-    });
-    </script>
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('active');
+                    
+                    // Change icon based on menu state
+                    if (mobileMenu.classList.contains('active')) {
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-times');
+                    } else {
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            }
+        });
+      </script>
+    </nav>
+    <section id="services" class="hero-section pb-12 pt-20">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-8 mt-8">
                 <h2 class="text-5xl font-black colorful-text mb-6">Our Services</h2>

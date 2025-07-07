@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 0; /* Removed top padding */
     padding-bottom: 2rem;
     width: 100%;
     min-height: calc(100vh - 4rem); /* Adjusted min-height for small screens */
@@ -29,11 +28,9 @@ html {
 
 body {
     font-family: 'Nunito', sans-serif;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-y: hidden;
 }
 .gradient-bg {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
