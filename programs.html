@@ -1,0 +1,131 @@
+<!-- Programs Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sibol Project Ph - Programs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gradient-bg">
+    <!-- Navigation -->
+           <nav class="fixed w-full z-50 glass-card transition-all duration-300" id="main-nav">
+        <div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center"> 
+                        <img src="sibol.jpg" alt="Sibol Project PH Logo" class="h-16 md:h-20 align-middle" style="margin-right:0.25rem;"> 
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Home</a>
+                    <a href="services.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Services</a>
+                    <a href="programs.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Programs</a>
+                    <a href="about.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">About</a>
+                    <a href="contact.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Contact</a>
+                </div>
+                <button onclick="window.location.href='contact.html';" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors hidden md:block">
+                    <i class="fas fa-phone mr-2"></i>Get Help
+                </button>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none" title="Toggle mobile menu" aria-label="Toggle mobile menu">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden py-2 text-center hidden">
+                <a href="index.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Home</a>
+                <a href="services.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Services</a>
+                <a href="programs.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Programs</a>
+                <a href="about.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">About</a>
+                <a href="contact.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Contact</a>
+                <button onclick="window.location.href='contact.html';" class="w-full bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors mt-2">
+                    <i class="fas fa-phone mr-2"></i>Get Help
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section id="programs" class="hero-section pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8 mt-8">
+                <h2 class="text-5xl font-black colorful-text mb-6">Our Programs</h2>
+                <p class="text-xl text-gray-800 max-w-3xl mx-auto">
+                    Tailored programs to support individuals with autism at every stage of life.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card rounded-3xl p-8 shadow-2xl bg-white bg-opacity-80">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Early Intervention Program</h3>
+                    <p class="text-gray-700 mb-6">
+                        Designed for young children, focusing on crucial developmental milestones through play-based therapy and parent involvement.
+                    </p>
+                    <ul class="text-gray-800 space-y-2">
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Speech & Language Development</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Social Skills Building</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Fine & Gross Motor Skills</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-3xl p-8 shadow-2xl bg-white bg-opacity-80">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">School Readiness Program</h3>
+                    <p class="text-gray-700 mb-6">
+                        Preparing children for successful integration into school environments, focusing on academic and social preparedness.
+                    </p>
+                    <ul class="text-gray-800 space-y-2">
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Classroom Behavior & Routine</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Academic Pre-skills</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Peer Interaction Strategies</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-3xl p-8 shadow-2xl bg-white bg-opacity-80">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Adolescent Transition Program</h3>
+                    <p class="text-gray-700 mb-6">
+                        Supporting teenagers in developing independence, vocational skills, and navigating social complexities.
+                    </p>
+                    <ul class="text-gray-800 space-y-2">
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Life Skills Training</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Vocational Guidance</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Social Competence Development</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-3xl p-8 shadow-2xl bg-white bg-opacity-80">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-4">Adult Support & Integration</h3>
+                    <p class="text-gray-700 mb-6">
+                        Empowering adults with autism to live independently, secure employment, and actively participate in community life.
+                    </p>
+                    <ul class="text-gray-800 space-y-2">
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Employment Support</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Independent Living Skills</li>
+                        <li><i class="fas fa-check-circle text-green-600 mr-2"></i>Community Engagement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                // Change icon from bars to times and vice-versa
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+    });
+    </script>
+    </body>
+</html>

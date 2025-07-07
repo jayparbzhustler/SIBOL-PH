@@ -1,0 +1,111 @@
+<!-- About Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sibol Project Ph - About</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gradient-bg">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card transition-all duration-300" id="main-nav" style="background: #F8F8F8; backdrop-filter: blur(10px); top: 0;">
+        <div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-2">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center"> 
+                        <img src="sibol.jpg" alt="Sibol Project PH Logo" class="h-16 md:h-20 align-middle logo-spacing"> 
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Home</a>
+                    <a href="services.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Services</a>
+                    <a href="programs.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Programs</a>
+                    <a href="about.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">About</a>
+                    <a href="contact.html" class="nav-link text-black hover:text-yellow-300 transition-colors relative">Contact</a>
+                </div>
+                <button onclick="window.location.href='contact.html';" class="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors hidden md:block">
+                    <i class="fas fa-phone mr-2"></i>Get Help
+                </button>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden py-2 text-center hidden">
+                <a href="index.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Home</a>
+                <a href="services.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Services</a>
+                <a href="programs.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Programs</a>
+                <a href="about.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">About</a>
+                <a href="contact.html" class="block py-2 text-black hover:text-yellow-600 transition-colors nav-link">Contact</a>
+                <button onclick="window.location.href='contact.html';" class="w-full bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors mt-2">
+                    <i class="fas fa-phone mr-2"></i>Get Help
+                </button>
+            </div>
+        </div>
+    </nav>
+    <section id="about" class="hero-section pb-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="glass-card rounded-3xl p-12 mt-8 md:mt-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl font-black colorful-text mb-6">About The Sibol Project</h2>
+                    <p class="text-xl text-gray-900 max-w-4xl mx-auto leading-relaxed">
+                        The Sibol Project Philippines is dedicated to empowering individuals with autism spectrum disorders and supporting their families through comprehensive services, education, and community awareness programs.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="autism.jpg" 
+                             alt="Autism support and therapy" 
+                             class="rounded-2xl shadow-2xl w-5/6 mx-auto">
+                    </div>
+                    <div class="text-gray-900">
+                        <h3 class="text-3xl font-bold mb-6 colorful-text">Our Mission</h3>
+                        <p class="text-lg mb-6 leading-relaxed">
+                            To provide holistic support, education, and advocacy for individuals with autism and their families, 
+                            promoting inclusion, understanding, and acceptance within our communities.
+                        </p>
+                        <h3 class="text-3xl font-bold mb-6 colorful-text">Our Vision</h3>
+                        <p class="text-lg mb-6 leading-relaxed">
+                            A society where every individual with autism is valued, supported and empowered to reach their full potential, 
+                            living with dignity and participating meaningfully in their communities.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-blue-100 text-blue-900 px-4 py-2 rounded-full text-sm font-semibold">Educational Organization</span>
+                            <span class="bg-green-100 text-green-900 px-4 py-2 rounded-full text-sm font-semibold">Therapy Center</span>
+                            <span class="bg-purple-100 text-purple-900 px-4 py-2 rounded-full text-sm font-semibold">Family Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+                // Change icon from bars to times and vice-versa
+                const icon = mobileMenuButton.querySelector('i');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        }
+    });
+    </script>
+    
+</body>
+</html>
