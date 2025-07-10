@@ -184,11 +184,21 @@
                         </button>
                         <!-- Feedback will be handled by Formspree's redirect or default browser behavior -->
                         <div id="form-feedback" class="mt-4 text-center text-gray-800 font-semibold"></div>
+    <!-- Modal for feedback -->
+    <div id="form-success-modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50 hidden">
+      <div class="bg-white rounded-2xl shadow-xl p-8 max-w-sm w-full text-center">
+        <div class="text-3xl mb-4 text-green-500"><i class="fas fa-check-circle"></i></div>
+        <div id="form-success-message" class="text-xl font-bold text-gray-800 mb-6">Thank you for your message! We will get back to you soon.</div>
+        <button id="close-success-modal" class="mt-2 px-6 py-2 bg-purple-600 text-white rounded-full font-bold hover:bg-purple-700 transition">Close</button>
+      </div>
+    </div>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
         var form = document.getElementById('contact-form');
         var feedback = document.getElementById('form-feedback');
         var submitBtn = document.getElementById('submit-button');
+        var modal = document.getElementById('form-success-modal');
+        var closeModalBtn = document.getElementById('close-success-modal');
         if (form) {
             form.addEventListener('submit', function (e) {
                 e.preventDefault();
@@ -203,10 +213,10 @@
                 })
                 .then(function(response) {
                     if (response.ok) {
-                        feedback.textContent = 'Thank you for your message! We will get back to you soon.';
-                        feedback.classList.remove('text-red-500');
-                        feedback.classList.add('text-green-500');
                         form.reset();
+                        if (modal) {
+                            modal.classList.remove('hidden');
+                        }
                     } else {
                         return response.json().then(function(data) {
                             if (data.errors) {
@@ -228,6 +238,11 @@
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Send Message';
                 });
+            });
+        }
+        if (closeModalBtn && modal) {
+            closeModalBtn.addEventListener('click', function () {
+                modal.classList.add('hidden');
             });
         }
     });
